@@ -1,10 +1,13 @@
 void setup()
 {
+  size(700,700);
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	background(255);
+  Die bob = new Die(350,350);
+  bob.show();
 }
 void mousePressed()
 {
@@ -12,10 +15,12 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
+  int myX = 0;
+  int myY = 0;
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		myX=x;
+    myY=y;
 	}
 	void roll()
 	{
@@ -23,6 +28,7 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		fill(0);
+    ellipse(myX, myY,100,100);
 	}
 }
