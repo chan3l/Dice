@@ -44,10 +44,19 @@ class Die //models one single dice cube
     if (sprink == 3)
     {
       fill((int)(Math.random()*256+1), (int)(Math.random()*256+1), (int)(Math.random()*256+1));
-      rect(30,30,15,4,200);
-      rect(60,60,15,4,200);
-      rect(40,70,15,4,200);
-  }
+      pushMatrix();
+      rotate(2/PI);
+      rect(70, -15, 15, 4, 200);
+      popMatrix();
+      pushMatrix();
+      rotate(PI*2);
+      rect(70, 100, 15, 4, 200);
+      popMatrix();
+      pushMatrix();
+      rotate(2/PI);
+      rect(70, -30, 15, 4, 200);
+      popMatrix();
+    }
     fill(255);
     ellipse(myX, myY, 30, 30);
   }
