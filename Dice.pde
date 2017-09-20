@@ -12,7 +12,7 @@ void draw()
   {
     for (int x=50; x<901; x=x+100)
     {
-      Die cookie = new Die(x,y);
+      Die cookie = new Die(x, y);
       cookie.show();
     }
   }
@@ -34,7 +34,7 @@ class Die
   }
   void roll()
   {
-    sprink = 1;
+    sprink = 3;
   }
   void show()
   {
@@ -45,8 +45,20 @@ class Die
     fill(255);
     ellipse(myX, myY, 30, 30);           //white inner circle
     fill((int)(Math.random()*256+1), (int)(Math.random()*256+1), (int)(Math.random()*256+1));
-    if (sprink ==1) {
-      
+    if (sprink ==1)
+    {
+      quad(25, 36, 37, 29, 37, 33, 25, 40);
+    }
+    if (sprink ==2)
+    {
+      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(60, 22, 72, 35, 67, 35, 56, 23);
+    }
+    if (sprink ==3)
+    {
+      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(60, 22, 72, 35, 67, 35, 56, 23);
+      quad(76, 45, 80, 43, 79, 56, 75, 61);
     }
   }
 }
