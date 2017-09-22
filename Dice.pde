@@ -8,11 +8,12 @@ void setup()
 void draw()
 {
   background(255);
+ //Die cookie = new Die(50,50);
   for (int y=50; y<601; y=y+100)
   {
     for (int x=50; x<901; x=x+100)
     {
-      Die cookie = new Die(x, y);
+      Die cookie = new Die(x,y);
       cookie.show();
     }
   }
@@ -34,7 +35,7 @@ class Die
   }
   void roll()
   {
-    sprink = 5;
+    sprink = (int)(Math.random()*6+1);
   }
   void show()
   {
@@ -74,6 +75,15 @@ class Die
       quad(76, 45, 80, 43, 79, 56, 75, 61);
       quad(71, 69, 75, 72, 60, 80, 62, 76);
       quad(34, 71, 32, 73, 47, 80, 48, 76);
+    }
+       if (sprink ==6)
+    {
+      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(60, 22, 72, 35, 67, 35, 56, 23);
+      quad(76, 45, 80, 43, 79, 56, 75, 61);
+      quad(71, 69, 75, 72, 60, 80, 62, 76);
+      quad(34, 71, 32, 73, 47, 80, 48, 76);
+      quad(21, 49, 19, 49, 25, 68, 28, 63);
     }
     }
   }
