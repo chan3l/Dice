@@ -8,12 +8,11 @@ void setup()
 void draw()
 {
   background(255);
- //Die cookie = new Die(50,50);
   for (int y=50; y<601; y=y+100)
   {
     for (int x=50; x<901; x=x+100)
     {
-      Die cookie = new Die(x,y);
+      Die cookie = new Die(x, y);
       cookie.show();
     }
   }
@@ -48,42 +47,42 @@ class Die
     fill((int)(Math.random()*256+1), (int)(Math.random()*256+1), (int)(Math.random()*256+1));
     if (sprink ==1)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
     }
     if (sprink ==2)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
       quad(60, 22, 72, 35, 67, 35, 56, 23);
     }
     if (sprink ==3)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
       quad(60, 22, 72, 35, 67, 35, 56, 23);
       quad(76, 45, 80, 43, 79, 56, 75, 61);
     }
     if (sprink == 4)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
       quad(60, 22, 72, 35, 67, 35, 56, 23);
       quad(76, 45, 80, 43, 79, 56, 75, 61);
       quad(71, 69, 75, 72, 60, 80, 62, 76);
     }
     if (sprink ==5)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
       quad(60, 22, 72, 35, 67, 35, 56, 23);
       quad(76, 45, 80, 43, 79, 56, 75, 61);
       quad(71, 69, 75, 72, 60, 80, 62, 76);
       quad(34, 71, 32, 73, 47, 80, 48, 76);
     }
-       if (sprink ==6)
+    if (sprink ==6)
     {
-      quad(25, 36, 37, 29, 37, 33, 25, 40);
+      quad(myX-25, myY-14, myX-13, myY-21, myX-13, myY-17, myX-25, 40);
       quad(60, 22, 72, 35, 67, 35, 56, 23);
       quad(76, 45, 80, 43, 79, 56, 75, 61);
       quad(71, 69, 75, 72, 60, 80, 62, 76);
       quad(34, 71, 32, 73, 47, 80, 48, 76);
-      quad(21, 49, 19, 49, 25, 68, 28, 63);
-    }
+      quad(21, 49, 19, 49, myX-25, 68, 28, 63);
     }
   }
+}
